@@ -4,6 +4,7 @@ const Todos = require(`${require.main.path}/models/todos.js`);
 mongoose.connect('mongodb://localhost/todo_db', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
 });
 
 const mongo_db_middleware = function(req, res, next){
