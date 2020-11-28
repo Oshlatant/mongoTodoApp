@@ -34,7 +34,7 @@ const delete_todo = function(id){
     return fetch(`${ip}/${id}`, {
         method: "DELETE"
     })
-    .then(res => res.text());
+    .then(res => res.json());
 }
 
 const create_todo = function(todo_doc) {

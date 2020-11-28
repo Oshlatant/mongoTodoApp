@@ -29,10 +29,10 @@ router.delete("/todos/:id", function(req, res){
 
     Todos.findByIdAndDelete(id, (err)=>{
         if(err){
-            response_text(res, "Todo not found...", 404);
+            res.json({err: "true"});
             return
         }
-        res.end();
+        res.json({statuscode: "200"});
     });
 });
 
